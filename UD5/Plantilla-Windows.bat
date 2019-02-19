@@ -14,11 +14,16 @@ REM Pregunta al usuario por teclado
 set /p resp="¿Pregunta?: " 
 
 
+REM https://ss64.com/nt/delayedexpansion.html
+REM OBLIGATORIO su uso en ciertos programas que usan expansión diferida, es decir, 
+REM que toman el valor de las variables que se modificaron dentro de los comandos IF o FOR 
+REM al incluir sus nombres en signos de admiración
+
 REM ESTRUCTURA IF (condicional)
 #
 #Delante de los if que tienen dentro variables, hay que añadir la instruccion
 #setlocal EnableDelayedExpansion antes de la declaración del if
-#Cuando se quiere acceder al contenido de una variable declarada fuera dentro del if
+#Cuando se quiere acceder al contenido de una variable declarada fuera del if
 #hay que nombrarlas así ¡variable!
 #http://ss64.com/nt/delayedexpansion.html
 #EJEMPLO
@@ -58,7 +63,6 @@ REM Si no existe un fichero ejecutamos una acción
 if not exist "NombreDelArchivo" AccionAEjecutar
 REM Si  existe un fichero ejecutamos una acción
 if  exist "NombreDelArchivo" AccionAEjecutar
-
 
 
 
