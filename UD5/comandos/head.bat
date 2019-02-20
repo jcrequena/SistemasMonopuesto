@@ -12,5 +12,4 @@ for /f "tokens=*" %%h in (%1) do (
     set LIN_!num!=%%h
     echo %%h
     IF !num!==%2 (exit /b)
-    
 )
