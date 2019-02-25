@@ -71,6 +71,9 @@ REM -------MENU GRÁFICO------------
 REM      ####################
 
 
+REM Cómo hacer un menú
+REM https://www.sevenforums.com/tutorials/78083-batch-files-create-menu-execute-commands.html
+
 :menu
 cls
 REM http://www.patorjk.com/software/taag/
