@@ -101,18 +101,15 @@ echo.
 
 rem Aquí creamos el menú de selección.
 
-choice /C 1234S /N /T 10 /D S /M "Seleccione la accion que quiere realizar:"
-REM /C -->Opciones
-REM /N --> Oculta la lista de opciones en el prompt.
-REM /T --> Número de segundos que el menú está a la espera de que se elija una opción (0-999)
-REM /D --> Especifica que opción por defecto se elije si salta el timeout (/T).
-REM /M --> Especifica el mensaje que se sacará por pantalla antes del prompt.
-if errorlevel 5 goto fin
-if errorlevel 4 goto opcion4
-if errorlevel 3 goto opcion3
-if errorlevel 2 goto opcion2
-if errorlevel 1 goto opcion1
-if errorlevel 0 goto menu
+set /p opcionMenu=Selecciona la opcion (1, 2, 3, 4 o S) y pulsa ENTER:
+if %opcionMenu%==1 goto opcion1
+if %opcionMenu%==2 goto opcion2
+if %opcionMenu%==3 goto opcion3
+if %opcionMenu%==4 goto opcion4
+if %opcionMenu%==S goto fin
+REM Si no se pulsa ninguna de las opciones, volvemos al menú
+echo "Pulsa una opcion valida"
+pause >null
 
 REM       ####################
 REM -------ETIQUETAS/FUNCIONES------------
@@ -136,4 +133,4 @@ REM       ####################
   pause 
   goto menu
 :fin
-echo "Nos vamos......."
+echo "Nos vamos de la App......."
