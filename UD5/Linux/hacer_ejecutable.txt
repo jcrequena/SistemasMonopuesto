@@ -1,0 +1,3 @@
+Para hacer un fichero ejecutable en linux hacemos:
+1. Ejecutar el comando chmod 777 nombre_fichero.sh
+2. Para ejecutar el script hacemos: ./nombre_fichero.sh
