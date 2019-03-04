@@ -13,3 +13,6 @@ if "%2"=="" ( echo "Falta el segundo parámetro. Uso: cut.bat param1 param2"
             )
 
 (for /f "tokens=1,5,7 delims=:" %%a in (%1) do echo %%a-%%b-%%c) > %2
+
+::Referencias
+::https://gist.github.com/HiroNakamura/4702728
