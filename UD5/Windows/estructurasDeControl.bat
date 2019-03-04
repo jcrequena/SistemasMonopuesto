@@ -42,6 +42,12 @@ echo "Estoy en el else Condición False"
 )
 pause
 
+:: Con exit /b, nos salimos del script sin cerrar la consola
+::
+if %resp%=="" (echo "La variable es vacia" 
+	             exit /b
+              )
+
 
 :: Si no existe un fichero ejecutamos una acción
 if not exist "NombreDelArchivo" AccionAEjecutar
