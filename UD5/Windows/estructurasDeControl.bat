@@ -27,7 +27,7 @@ for %%v in (1 2 3 4) do (
 FOR /L %%parameter IN (start,step,end) DO (comandos)
 
 :: Ejemplo
-FOR /L %%varDirectory IN (1,1,10) DO (mkdir D:\demo\%%varDirectory)
+FOR /L %%d IN (1,1,10) DO (mkdir D:\demo\%%d)
 
 
 :: Establecer un valor a una variable
