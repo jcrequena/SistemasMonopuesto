@@ -11,5 +11,10 @@ if "%1"=="" (echo "Falta el primer parámetro. Uso: cut.bat fichero_a_leer"
 
 (for /f "tokens=1,5,7 delims=:" %%a in (%1) do echo %%a-%%b-%%c)
 
+:: donde %%a es el valor del campo 1, %%b es el valor del campo 5 y %%c es el valor del campo 7
+:: dependiendo del número de tokens(campos) a leer, pondremos tantos caracteres entre %% como campos en orden alfabético
+:: es decir:a,b,c,d,e,f,...
+
+
 ::Referencias
 ::https://gist.github.com/HiroNakamura/4702728
