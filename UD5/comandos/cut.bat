@@ -1,8 +1,8 @@
 @echo off
 :: La llamada al script, ha de ser la siguiente:
-:: cut.bat fichero_origen 
+:: cut.bat fichero_a_leer 
 :: donde %1 es el primer parámetro 
-:: ejemplo cut.bat origen.txt
+:: ejemplo cut.bat fichero_a_leer.txt
 :: Para este caso de ejemplo, recuperamos las columnas 1, 5 y 7
 ::
 if "%1"=="" (echo "Falta el primer parámetro. Uso: cut.bat fichero_a_leer" 
