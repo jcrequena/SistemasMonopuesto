@@ -1,0 +1,15 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:       listar-procesos
+# Required-Start: $remote_fs $network
+# Required-Stop:  $remote_fs
+# Default-Start:  5
+# Default-Stop:   
+# Short-Description: List State Process
+### END INIT INFO
+
+#Nota: Cambiar jc,por el nommbre de vuestro home
+echo `date` >> /home/jc/process-list.dat
+echo "---------------------------------" >> /home/jc/process-list.dat
+ps -aux >> /home/jc/process-list.dat
+echo "---------------------------------" >> /home/jc/process-list.dat
