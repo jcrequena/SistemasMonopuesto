@@ -1,0 +1,20 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:       info-access
+# Required-Start: $remote_fs $network
+# Required-Stop:  $remote_fs
+# Default-Start:  5
+# Default-Stop:   
+# Short-Description: Información de acceso al sistema.
+### END INIT INFO
+
+#Fecha de los datos de información de acceso al equipo.
+echo `date` >> /var/log/info-access.dat
+echo "---------------------------------" >> /var/log/info-access.dat
+echo "Sistema operativo:" `uname` >> /var/log/info-access.dat
+echo "Arquitectura del Sistema operativo:" `uname -m` >> /var/log/info-access.dat
+echo "Nombre y versión del kernel:" `uname -sr` >> /var/log/info-access.dat
+echo "Usuario: "$USER >> /var/log/info-access.dat
+echo "Nombre del equipo: "$HOSTNAME >> /var/log/info-access.dat
+echo "Listado del hardware del equipo:" `lshw -short` >> /var/log/info-access.dat
+echo "---------------------------------" >> /var/log/info-access.dat
