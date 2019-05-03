@@ -8,8 +8,7 @@
 # Short-Description: List State Process
 ### END INIT INFO
 
-#Nota: Cambiar jc,por el nommbre de vuestro home
-echo `date` >> /home/jc/process-list.dat
-echo "---------------------------------" >> /home/jc/process-list.dat
+echo `date` >> /var/log/estado-procesos.dat
+echo "---------------------------------" >> /var/log/estado-procesos.dat
 ps -aux >> /home/jc/process-list.dat
-echo "---------------------------------" >> /home/jc/process-list.dat
+echo "---------------------------------" >> /var/log/estado-procesos.dat
