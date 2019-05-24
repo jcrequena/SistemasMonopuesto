@@ -1,3 +1,8 @@
+::Autor/a: JC Requena
+::Fecha 24/05/2019
+::Descripción: Menú básico con 4 opciones y una final para salir del script.
+::Cada opcióndel menú, accede a una etiqueta (función) que es donde se desarrolla una funcionalidad en concreto.
+
 @echo off
 cls
 title Título de la aplicación
