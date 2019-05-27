@@ -1,8 +1,7 @@
-REM Comprobamos si existen las carpetas, en caso contrario las creamos
-
-mkdir Documentación
-mkdir -p Documentación/Direccion
-mkdir -p Documentación/Informatica
+#Creamos los directorios a publicar
+mkdir /pub/Documentación
+mkdir /pub/Documentación/Direccion
+mkdir /pub/Documentación/Informatica
 
 
 # Se han creado los grupos Direccion_RW e Informatica_RW
@@ -10,23 +9,13 @@ mkdir -p Documentación/Informatica
 # Se Aplican los permisos
 
 groupadd Direccion_RW 
-groupadd Dirección_RW usuario_Direcc /add
+#Añadir el usaurio usuario_Direcc al grupo Dirección_RW
+adduser usuario_Direcc Dirección_RW 
 
-chmod 
-icacls C:\Documentación\Dirección /GRANT Dirección_RW:(R,W)
+#Cambiamos el propietario del grupo al directorio Direccion. El nuevo propietario es Direccion_RW
+chgrp /pub/Documentación/Direccion Direccion_RW
+#Establecemos los permisos de rwx al grupo propietario del directorio Direccion
+chmod g+rwx /pub/Documentación/Direccion
 
-groupadd Informatica_RW /add /comment: "Acceso en modo lectura/escritura a Informatica"
-groupadd Informatica_RW usuario_Inf /add
-chmod Documentación/Informatica /GRANT Informatica_RW:(R,W)
 
-REM Se crean los grupos de lectura de las carpetas (Direccion_R e Informatica_R)
-REM Se añaden los usuarios a los grupos.
-REM Añadimos el grupo al directorio correspondiente
 
-net localgroup Dirección_R /add /comment: "Acceso en modo lectura a Dirección"
-net localgroup Dirección_R usuario_Inf /add
-chmod Documentación/Dirección /GRANT Dirección_R:(R)
-
-groupadd Informatica_R /add /comment: "Acceso en modo lectura a Informatica"
-groupadd Informatica_R usuario_Direc /add
-chmod Documentación/Informatica /GRANT Informatica_R:(R)
