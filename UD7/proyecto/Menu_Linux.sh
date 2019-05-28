@@ -19,6 +19,13 @@ fntFuncion2() {
 fntFuncion3() {
   echo "Estoy en la función 3"
 } #Fin función fntFuncion3
+
+#Comando para listar los usuarios cuyo id >=1000. Se usa el comando cut
+#En la expresión regular, se busca en el campo 3, los valores que tengan 4 dígitos (mayores a 999). 
+#Después, con cut -d: -f1, sacamos por pantalla el campo 1 del fichero /etc/passwd que es el nombre de usuario
+fntListarUsuarios (){
+`cut -d: -f1,3 /etc/passwd | egrep ':[0-9]{4}$' | cut -d: -f1`
+}
                                            ####################
 #------------------------------------------#PROGRAMA PRINCIPAL#---------------------------------------------
 
