@@ -31,13 +31,6 @@ fntFuncion3() {
 while [ opcion != "" ]
 do
 	clear
-	# http://www.patorjk.com/software/taag/
-	echo "      __ _____  ___                                 "
-	echo "  __ / // ___/ / _ \ ___  ___ _ __ __ ___  ___  ____"
-	echo " / // // /__  / , _// -_)/ _ // // //  _)/ _ \/ _  /"
-	echo " \___/ \___/ /_/|_| \__/ \_, / \_,_/ \__//_//_/\_,_/"
-        echo "                          /_/"                     
-        echo "                         /_/ "
 	echo ""
 	echo "Menu" 
 	echo "_________________________________________"
