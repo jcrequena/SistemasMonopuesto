@@ -1,5 +1,5 @@
 
-#Condcionales: http://somebooks.es/capitulo-5-estructuras-condicionales/2/
+#Condicionales: http://somebooks.es/capitulo-5-estructuras-condicionales/2/
 
 #IF
 #https://ss64.com/ps/if.html
