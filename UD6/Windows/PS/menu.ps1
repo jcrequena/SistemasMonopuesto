@@ -1,3 +1,6 @@
+#Autor:JCRequena
+#Lo que se pone a partir de la almohadilla(#) es un comentario y no se interpreta por el compilador. No es código fuente.
+#
 function mostrarMenu 
 { 
      cls 
@@ -14,6 +17,7 @@ do
 { 
      mostrarMenu 
      $input = Read-Host "Selecciona una opcion del menu:"
+     #Referencia:https://ss64.com/ps/switch.html
      switch ($input) 
      { 
            '1' { 
