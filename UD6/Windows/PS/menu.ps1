@@ -34,7 +34,7 @@ function mostrarMenu
 do 
 { 
      mostrarMenu 
-     $input = Read-Host "Selecciona una opcion del menu:"
+     $input = Read-Host "Selecciona una opcion del menu"
      #Referencia:https://ss64.com/ps/switch.html
      switch ($input) 
      { 
@@ -57,9 +57,10 @@ do
            } 
 	   default 
 	   {
-		'Has de pulsar un numero entre 1-3 o pulsar S'
+		'Warning:Has de pulsar un numero entre 1-3 o pulsar S'
            }
      } 
-     pause 
+     #Hacemos una pausa con mensaje personalizado, hasta que el usuario pulse enter
+     Read-Host -Prompt "Pulsa [ENTER] para volver al menú principal” 
 } until ($input -eq 's' -or $input -eq 'S')
 #Se comprueba si se ha pulsado la s minúscula o mayúscula (S).
