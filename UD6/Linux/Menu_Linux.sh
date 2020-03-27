@@ -19,7 +19,7 @@ fntFuncion3() {
 
 fntmostrarMenu () {
     	clear
-    	echo $USERNAME
+    	echo "Bienvenido " $LOGNAME
     	echo ""
 	echo "Menu" 
 	echo "_________________________________________"
