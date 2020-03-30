@@ -5,9 +5,19 @@
 # Declaración de FUNCIONES
 #   
 
-fntFuncion1() {
-	echo "Estoy en la función 1"
-}  #Fin función fntFuncion1
+fntCrearBasedeDatos() {
+	#Bucle para crear los directorios de los meses
+	for i in {1..12}
+	do
+   		#Comando para crear directorio
+		#Bucle para crear los días en el mes correspondiente
+		for i in {1..31}
+		do
+   			#Comando para crear el fichero vacío en el directorio
+		done
+	done
+	echo "Base de datos creada correctamente"
+}  #Fin función fntCrearBasedeDatos
 	
 fntFuncion2() {
   	echo "Estoy en la función 2"
@@ -24,7 +34,7 @@ fntmostrarMenu () {
 	echo "Menu" 
 	echo "_________________________________________"
   	echo ""
-  	echo "1)" "Opcion1"
+  	echo "1)" "Crear Base de datos (directorios+ficheros)"
   	echo "2)" "Opcion2"
 	echo "3)" "Opcion3"
 	echo "4)" "SALIR"
@@ -51,7 +61,7 @@ do
 	#Comprueba si el valor recogido en opcion es 1,2,3 o 4, si es otra cosa, se ejecuta *)
     	case $opcion in
     	1) 
-		fntFuncion1
+		fntCrearBasedeDatos
        		;;
     	2) 
 		fntFuncion2	   
