@@ -1,6 +1,19 @@
 #Autor:JCRequena
 #Lo que se pone a partir de la almohadilla(#) es un comentario y no se interpreta por el compilador. No es código fuente.
 #
+function fnt_CrearBasedeDatos {
+	#Bucle para crear los directorios de los meses
+	ForEach ($Number in 1..12) {
+    		#Comando para crear directorio
+		#Bucle para crear los días en el mes correspondiente
+		ForEach ($Number in 1..31) {
+    			#Comando para crear el fichero vacío en el directorio
+		} # fin del for de 1..31
+	} # fin del for de 1..12
+	Write-Host "Base de datos creada correctamente"
+}  #Fin función fntCrearBasedeDatos
+	
+
 function fnt_Opcion-1 
 {
 	cls 
@@ -24,12 +37,11 @@ function mostrarMenu
      Write-Host "============================================" 
      Write-Host "===============Menu Principal===============" 
      Write-Host "============================================" 
-     Write-Host "1) Opcion 1" 
+     Write-Host "1) Crear base de datos (directorios+ficheros)" 
      Write-Host "2) Opcion 2" 
      Write-Host "3) Opcion 3" 
      Write-Host "S) Pulsa la tecla 'S' para salir" 
 }
-
 
 do 
 { 
@@ -40,7 +52,7 @@ do
      { 
            '1' 
 	   { 
-                fnt_Opcion-1 
+                fnt_CrearBasedeDatos
            } 
 	   '2' 
 	   { 
