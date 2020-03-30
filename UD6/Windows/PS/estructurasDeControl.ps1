@@ -18,7 +18,7 @@ if ($num -gt 0) {
 #-gt: mayor que
 #-ge: mayor o igual que
 #-lt: menor que
-#-le: menor o gual que
+#-le: menor o igual que
 
 ###################FIN IF ####################################
 
