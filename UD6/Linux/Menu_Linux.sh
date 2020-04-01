@@ -10,10 +10,12 @@ fntCrearBasedeDatos() {
 	for i in {1..12}
 	do
    		#Comando para crear directorio
+		$i
 		#Bucle para crear los días en el mes correspondiente
-		for i in {1..31}
+		for j in {1..31}
 		do
-   			#Comando para crear el fichero vacío en el directorio
+			#Comando para crear el fichero vacío en el directorio
+			$j
 		done
 	done
 	echo "Base de datos creada correctamente"
