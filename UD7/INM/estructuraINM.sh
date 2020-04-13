@@ -32,5 +32,6 @@ for  mes in $( seq 1 1 12 ); do
 		    day=$dia
 	    fi
 	    mkdir -p /home/$USER/inm/radar2020/$month/$day
+	    mkdir -p /home/$USER/inm/temperaturas-max2020/$month/$day
     done
 done
