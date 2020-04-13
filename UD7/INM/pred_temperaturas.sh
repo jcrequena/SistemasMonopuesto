@@ -7,6 +7,6 @@ dia=1
 for horas in $( seq 24 48 72); do
   #Componer el fichero png a descargar
   ruta=
-  wget
+  wget .....
   dia=$((dia+1))
 done
