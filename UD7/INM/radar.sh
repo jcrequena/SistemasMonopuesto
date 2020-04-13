@@ -1,6 +1,10 @@
 #Variables globales
 zero=0
 
+#Para componer el año, mes, día, hora y minuto puedes utilizar la instrucción siguiente
+#date +"%Y%m%d""%H""%M"
+
+
 if [ $(date +"%M") -lt 30 ]; then
   minutos=00
 else
@@ -12,4 +16,4 @@ fechaMes=$(date +"%m")
 fechaDia=$(date +"%d")
 year=$(date +"%Y")
 
-wget  
+wget .....  
