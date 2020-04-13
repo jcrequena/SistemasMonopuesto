@@ -12,4 +12,4 @@ fechaMes=$(date +"%m")
 fechaDia=$(date +"%d")
 year=$(date +"%Y")
 
-wget http://www.aemet.es/imagenes_d/eltiempo/observacion/radar/  -O /home/$USER/inm/radar2020/
+wget  
