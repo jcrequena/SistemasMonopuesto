@@ -4,6 +4,6 @@ dia=1
 for horas in $( seq 24 48 72); do
   #Componer el fichero png a descargar
   ruta=
-  wget http://www.aemet.es/imagenes_d/eltiempo/prediccion/temperaturas/$ruta -O /home/$USER/inm/temperaturas-max2019
+  wget  
   dia=$((dia+1))
 done
