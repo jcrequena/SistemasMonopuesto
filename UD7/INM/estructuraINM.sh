@@ -14,6 +14,14 @@ zero=0
 #│   │   ├── 02
 #│   │   ├── 03
 #....
+#Creamos la estructura de directorio para las temperaturas máximas
+#/home/smx1/inm
+#├── temperaturas-max2020
+#│   ├── 01
+#│   │   ├── 01
+#│   │   ├── 02
+#│   │   ├── 03
+#....
 
 #El primer bucle recorre cada uno de los 12 mese del año, y el segundo bucle,
 # va creando los directorios para cada uno de los días por mes
