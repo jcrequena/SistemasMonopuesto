@@ -31,6 +31,6 @@ for  mes in $( seq 1 1 12 ); do
 	    else
 		    day=$dia
 	    fi
-	    mkdir -p /home/$USER/inm/radar2019/$month/$day
+	    mkdir -p /home/$USER/inm/radar2020/$month/$day
     done
 done
