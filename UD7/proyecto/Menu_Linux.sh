@@ -1,6 +1,6 @@
 #!/bin/bash
 #Autor/a: JC Requena
-#Fecha 24/05/2019
+#Fecha 24/04/2020
 #Descripción: Menú básico con 4 opciones y una final para salir del script.
 #Cada opcióndel menú, accede a una función que es donde se desarrolla una funcionalidad en concreto.
 
