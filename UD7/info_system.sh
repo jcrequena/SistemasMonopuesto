@@ -1,8 +1,8 @@
 #!/bin/bash
 ### BEGIN INIT INFO
 # Provides:       info-system
-# Required-Start: $remote_fs $network
-# Required-Stop:  $remote_fs
+# Required-Start: 
+# Required-Stop:  
 # Default-Start:  5
 # Default-Stop:   
 # Short-Description: Información de acceso al sistema.
