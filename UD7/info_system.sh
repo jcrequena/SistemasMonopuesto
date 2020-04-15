@@ -3,7 +3,7 @@
 # Provides:       info-system
 # Required-Start: 
 # Required-Stop:  
-# Default-Start:  5
+# Default-Start: 4
 # Default-Stop:   
 # Short-Description: Información de acceso al sistema.
 ### END INIT INFO
