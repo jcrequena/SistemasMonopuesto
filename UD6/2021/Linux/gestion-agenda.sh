@@ -5,7 +5,7 @@
 # Añadimos unas variables globales, que utilizaremos a lo largo del código
 zero=0
 anyoEnCurso=21
-nombreAgenda=Gestion-Agenda-2021
+nombreAgenda=Agenda-Tareas-2021
 
 
 #     ##############
