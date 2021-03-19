@@ -18,22 +18,20 @@ fntCrearEntradadasAgenda() {
         #Formulario para entrada de datos en la agenda.
 	clear
 	echo "------------Indroduzción de datos---------------"
-	read -p "Indique el mes: " mes 
-	read -p "Indique el dia: " dia 
-	read -p "Indique la hora: " hora 
-	read -p "Indique minuto: " min
-	read -p "Introduzca la descripción de la tarea: " desc
+	read -p "Indica el mes: " mes 
+	read -p "Indica el dia: " dia 
+	read -p "Indica la hora: " hora 
+	read -p "Indica minuto: " min
+	read -p "Introduce la descripción de la tarea: " desc
 	read -p "Notas :" nota
 	read -p "Urgencia: " urg  
-	read -p "Introduzca el municipio: " mun
-	read -p "Introduzca el nombre del contacto: " nomcontacto
+	read -p "Introduce el municipio: " mun
+	read -p "Introduce el nombre del contacto: " nomcontacto
 	echo ""
 
     #Concatenación y redirección de los datos al fichero concreto de la agenda.	
 	#Ejemplo --> H:19;M:05;D:Reunión;N:Despacho A-21;P:2;L:Burriana;C:JCRequena.
-
     #Comando para escribir en el fichero $nombreAgenda/$mes/$dia$mes$anyoEnCurso.dat los datos capturados
-
 	echo ""
   	echo "Registro guardado correctamente"	
 }
@@ -65,8 +63,8 @@ if [ "$opcion" != 8 ]; then
 	echo ""
 	echo "Selecciona el día y mes del que deseas obtener la información:"
 	echo ""
-	read -p "Introduzca el dia, ejemplo 01: " dia
-	read -p "Introduzca el mes, ejemplo 02: " mes
+	read -p "Introduce el dia, ejemplo 01: " dia
+	read -p "Introduce el mes, ejemplo 02: " mes
 	case $opcion in
     1)
 	  #Comando para Visualizar las 5 últimas tareas de un día en concreto 
@@ -78,7 +76,7 @@ if [ "$opcion" != 8 ]; then
 	  ;;
     3)
 	   #Comando para visualizar las tareas que se hayan realizado en una Localidad en concreto"
-	   read -p "Introduzca la localidad: " localidad
+	   read -p "Introduce la localidad: " localidad
 	  ;;
     4) 
       #Comando para visualizar los campos Descripción y Contacto de las tareas
@@ -100,7 +98,7 @@ if [ "$opcion" != 8 ]; then
       ;;
           
     *) 
-	  echo "Error: Seleccione una opcion valida [1-8]!"          
+	  echo "Error: Selecciona una opción válida [1-8]"          
      ;;     
 	esac
 fi
@@ -109,7 +107,7 @@ done
 # Opción 3. Borrar las tareas de un mes en concreto
 fntBorrarTareasMes () {
 	clear
-	read -p "Introduzca el mes: " mes
+	read -p "Introduce el mes: " mes
 	echo ""
 	
     #Comando para borrar las tareas de ese mes
@@ -132,7 +130,7 @@ echo "4. Volver al menú principal."
 echo "_____________________________________________________"
 echo ""
 
-read -p "Seleccione la operacion a realizar [1-4]: " opcion
+read -p "Selecciona la operación a realizar [1-4]: " opcion
 case $opcion in
     1)
       if [ -d $anyoEnCurso/ ]; then
@@ -156,7 +154,7 @@ case $opcion in
       ;;
           
     *) 
-	  echo "Error: Seleccione una opcion valida [1-4]!"
+	  echo "Warning: Seleccione una opcion válida [1-4]"
           
      ;;     
 esac
@@ -199,24 +197,24 @@ do
 	    echo "6. Salir del programa."
 	echo "_________________________________________"
 	echo ""
-	read -p "Seleccione la operacion a realizar [1-6]: " opcion
+	read -p "Selecciona la operación a realizar [1-6]: " opcion
 	#Comprueba si el valor recogido en opciones del 1 al 6, si es otra cosa, se ejecuta *)
     	case $opcion in
     	1) 
 		fntCrearEntradadasAgenda
-		read -p "Presione [Enter] para continuar." b
+		read -p "Presiona [Enter] para continuar." b
        		;;
     	2) 
 		fntConsultarTareas
-		read -p "Presione [Enter] para continuar." c
+		read -p "Presiona [Enter] para continuar." c
         	;;
         3)	
 		fntBorrarTareasMes
-		read -p "Presione [Enter] para continuar." d
+		read -p "Presiona [Enter] para continuar." d
         	;;
         4)	
 		fntOpcionesCompresion	
-		read -p "Presione [Enter] para continuar." r
+		read -p "Presiona [Enter] para continuar." r
         	;;
         5)	
 		fntBorrarAgenda	
@@ -227,8 +225,8 @@ do
         	exit
         	;;
     	*) 
-		echo "Error: Seleccione una opcion valida [1-6]!"
-        	read -p "Presione [Enter] para continuar" g
+		echo "Warning: Seleccione una opción válida [1-6]"
+        	read -p "Presiona [Enter] para continuar" g
 		;;
    	esac
 done
