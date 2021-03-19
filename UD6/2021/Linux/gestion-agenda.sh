@@ -12,45 +12,7 @@ nombreAgenda=Gestion-Agenda-2021
 #-------FUNCIONES---
 #     ##############
 
-#Opción 1. Crear la Base de datos de la agenda
-fntCrearBaseDatosAgenda() {
-dia=0
-mes=0
-#condicional para comprobar que la base de datos de agenda existe, 
-#y si no, crear una nueva  todos los ficheros vacios.
-if [ -d $nombreAgenda/ ]; then
-    echo "Ya existe una agenda en este directorio."
-else
-	mkdir $nombreAgenda
-	for i in {1..12}
-	do
-		if [ $i -lt 10 ]
-		then
-			mes="$zero$i"
-		else
-			mes=$i
-		fi
-		mkdir $nombreAgenda/$mes
-        for j in {1..31}
-        do
-            if [ $j -lt 10 ]
-		    then
-			    dia="$zero$j"
-		    else
-			    dia=$j
-		    fi
-            touch $nombreAgenda/$mes/$dia$mes$anyoEnCurso.dat
-		done		
-	done
-	echo ""	
-	echo "La base de datos de la agenda para el año $anyoEnCurso ha sido creada correctamente."
-	echo ""
-fi
-echo "Volviendo al menu inicial."
-}
-
-
-#Opción 2. Creación de entradas/registros para la agenda.
+#Opción 1. Creación de entradas/registros para la agenda.
 fntCrearEntradadasAgenda() {
 
         #Formulario para entrada de datos en la agenda.
@@ -76,7 +38,7 @@ fntCrearEntradadasAgenda() {
   	echo "Registro guardado correctamente"	
 }
 
-# Opción 3. Consultas de tareas en la base de datos Agenda
+# Opción 2. Consultas de tareas en la base de datos Agenda
 fntConsultarTareas() {
 while [ "$opcion" != 8 ]
 do
@@ -144,7 +106,7 @@ if [ "$opcion" != 8 ]; then
 fi
 done
 }
-# Opción 4. Borrar las tareas de un mes en concreto
+# Opción 3. Borrar las tareas de un mes en concreto
 fntBorrarTareasMes () {
 	clear
 	read -p "Introduzca el mes: " mes
@@ -156,7 +118,7 @@ fntBorrarTareasMes () {
 	echo "Tareas del mes $mes borradas correctamente"
 }
 
-#Opción 5. Opciones de compresión.
+#Opción 4. Opciones de compresión.
 fntOpcionesCompresion() {
 clear
 echo ""
@@ -201,7 +163,7 @@ esac
 }
 
 
-#Opción 6. Función para la opción de borrado de la base de datos de la Agenda.
+#Opción 5. Función para la opción de borrado de la base de datos de la Agenda.
 fntBorrarAgenda () {
 if [ -d $nombreAgenda/ ]; then
     #Comando para borrar la base de datos de la agenda
@@ -215,62 +177,57 @@ else
 fi	
 }
 
-                                           ####################
-#------------------------------------------#PROGRAMA PRINCIPAL#---------------------------------------------
-                                           ####################
+              ####################
+#--------------#PROGRAMA PRINCIPAL#---------------------------------------------
+              ####################
 
 while [ opcion != "" ]
 do
 	clear
 	echo ""
-	echo "        Gestión Agenda Personal 2021"
+	echo "        Gestión Agenda de tareas 2021"
 	echo "            by Juan Carlos Requena"
 	echo ""
 	echo "            MENÚ PRINCIPAL" 
 	echo "__________________________________________"
      	echo ""					      
-    	echo "1. Crear base de datos de la agenda."	
-    	echo "2. Insertar tarea en la agenda."
-	    echo "3. Consultar tareas de la agenda."
-	    echo "4. Borrado de tareas de la agenda."
-	    echo "5. Opciones de compresión."
-	    echo "6. Borrar base de datos Agenda."
-	    echo "7. Salir del programa."
+    	echo "1. Insertar tarea en la agenda."
+	    echo "2. Consultar tareas de la agenda."
+	    echo "3. Borrado de tareas de la agenda."
+	    echo "4. Opciones de compresión."
+	    echo "5. Borrar base de datos Agenda."
+	    echo "6. Salir del programa."
 	echo "_________________________________________"
 	echo ""
-	read -p "Seleccione la operacion a realizar [1-7]: " opcion
-	#Comprueba si el valor recogido en opciones del 1 al 7, si es otra cosa, se ejecuta *)
+	read -p "Seleccione la operacion a realizar [1-6]: " opcion
+	#Comprueba si el valor recogido en opciones del 1 al 6, si es otra cosa, se ejecuta *)
     	case $opcion in
-    	1)	
-		fntCrearBaseDatosAgenda
-		read -p "Presione [Enter] para continuar." a
-       		;;
-    	2) 
+    	1) 
 		fntCrearEntradadasAgenda
 		read -p "Presione [Enter] para continuar." b
        		;;
-    	3) 
+    	2) 
 		fntConsultarTareas
 		read -p "Presione [Enter] para continuar." c
         	;;
-        4)	
+        3)	
 		fntBorrarTareasMes
 		read -p "Presione [Enter] para continuar." d
         	;;
-        5)	
+        4)	
 		fntOpcionesCompresion	
 		read -p "Presione [Enter] para continuar." r
         	;;
-        6)	
+        5)	
 		fntBorrarAgenda	
 		read -p "Presione [Enter] para continuar." f
         	;;	
-    	7) 
+    	6) 
 		    clear
         	exit
         	;;
     	*) 
-		    echo "Error: Seleccione una opcion valida [1-7]!"
+		echo "Error: Seleccione una opcion valida [1-6]!"
         	read -p "Presione [Enter] para continuar" g
 		;;
    	esac
