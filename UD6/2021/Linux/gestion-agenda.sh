@@ -3,7 +3,6 @@
 #By:JcRequena
 
 # Añadimos unas variables globales, que utilizaremos a lo largo del código
-zero=0
 anyoEnCurso=21
 nombreAgenda=Agenda-Tareas-2021
 
@@ -17,13 +16,13 @@ fntCrearEntradadasAgenda() {
 
         #Formulario para entrada de datos en la agenda.
 	clear
-	echo "------------Indroduzción de datos---------------"
+	echo "------------Indroducción de datos---------------"
 	read -p "Indica el mes: " mes 
-	read -p "Indica el dia: " dia 
+	read -p "Indica el día: " dia 
 	read -p "Indica la hora: " hora 
 	read -p "Indica minuto: " min
 	read -p "Introduce la descripción de la tarea: " desc
-	read -p "Notas :" nota
+	read -p "Notas: " nota
 	read -p "Urgencia: " urg  
 	read -p "Introduce el municipio: " mun
 	read -p "Introduce el nombre del contacto: " nomcontacto
@@ -47,18 +46,19 @@ echo "     Selecciona la opción que deseas"
 echo "_____________________________________________________"
 echo ""
 echo " 1. Visualizar las 5 últimas tareas de un día en concreto."
-echo " 2. Visualizar las tareas que tengan prioridad máxima (9)."
-echo " 3. Visualizar las tareas que se hayan realizado en una Localidad en concreto"
-echo " 4. Visualizar los campos Descripción de la tarea y Contacto de las tareas de un día en concreto."
-echo " 5. Visualizar todas las tareas que tengan el campo Notas vacío."
-echo " 6. Visualizar todas las tareas para un mes concreto."
-echo " 7. Ordenar las tareas de un día en concreto por el campo Hora."
-echo " 8. Volver al menú principal."
+echo " 2. Visualizar las 2 primeras tareas de un día en concreto."
+echo " 3. Visualizar las tareas que tengan prioridad máxima (9)."
+echo " 4. Visualizar las tareas que se hayan realizado en una Localidad en concreto"
+echo " 5. Visualizar los campos Descripción de la tarea y Contacto de las tareas de un día en concreto."
+echo " 6. Visualizar todas las tareas que tengan el campo Notas vacío."
+echo " 7. Visualizar todas las tareas para un mes concreto."
+echo " 8. Ordenar las tareas de un día en concreto por el campo Hora."
+echo " 9. Volver al menú principal."
 echo "_____________________________________________________"
 echo ""
-read -p "Seleccione la operacion a realizar [1-8]: " opcion
+read -p "Seleccione la operacion a realizar [1-9]: " opcion
 
-if [ "$opcion" != 8 ]; then
+if [ "$opcion" != 9 ]; then
 	echo "_____________________________________________________"
 	echo ""
 	echo "Selecciona el día y mes del que deseas obtener la información:"
@@ -70,37 +70,41 @@ if [ "$opcion" != 8 ]; then
 	  #Comando para Visualizar las 5 últimas tareas de un día en concreto 
 	  echo ""
 	  ;;
-    2)	
+    2)
+	  #Comando para Visualizar las 5 últimas tareas de un día en concreto 
+	  echo ""
+	  ;;
+    3)	
 	  #Comando para visualizar las tareas que tengan prioridad máxima (9)
 	  echo ""
 	  ;;
-    3)
+    4)
 	   #Comando para visualizar las tareas que se hayan realizado en una Localidad en concreto"
 	   read -p "Introduce la localidad: " localidad
 	  ;;
-    4) 
+    5) 
       #Comando para visualizar los campos Descripción y Contacto de las tareas
       echo ""
       ;;
-    5) 
+    6) 
       #Comando para visualizar todas las tareas que tengan el campo Notas vacío
       echo ""
       ;;
-    6) 
+    7) 
       #Comando para visualizar todas las tareas del mes introducido
       echo ""
       ;;
-     7) 
+     8) 
       #Comando para visualizar las tareas de un día en concreto ordenadas por el campo Hora
       echo ""
       ;;
-    8) 
+    9) 
       ;;
           
     *) 
-	  echo "Error: Selecciona una opción válida [1-8]"          
+	  echo "Error: Selecciona una opción válida [1-9]"          
      ;;     
-	esac
+    esac
 fi
 done
 }
@@ -111,7 +115,7 @@ fntBorrarTareasMes () {
 	echo ""
 	
     #Comando para borrar las tareas de ese mes
-	#
+    #
 
 	echo "Tareas del mes $mes borradas correctamente"
 }
@@ -154,13 +158,11 @@ case $opcion in
       ;;
           
     *) 
-	  echo "Warning: Seleccione una opcion válida [1-4]"
+	  echo "Warning: Selecciona una opción válida [1-4]"
           
      ;;     
 esac
 }
-
-
 #Opción 5. Función para la opción de borrado de la base de datos de la Agenda.
 fntBorrarAgenda () {
 if [ -d $nombreAgenda/ ]; then
@@ -170,7 +172,7 @@ else
     echo ""
 	echo "La agenda no existe"
 	echo ""
-	echo "Volviendo al menu inicial."
+	echo "Volviendo al menú inicial...."
 	echo ""
 fi	
 }
@@ -225,7 +227,7 @@ do
         	exit
         	;;
     	*) 
-		echo "Warning: Seleccione una opción válida [1-6]"
+		echo "Warning: Selecciona una opción válida [1-6]"
         	read -p "Presiona [Enter] para continuar" g
 		;;
    	esac
