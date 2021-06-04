@@ -8,7 +8,7 @@ zero=0
 
 #Creamos la estructura de directorio para las imágenes Rádar
 #/home/smx1/inm
-#├── radar2020
+#├── radar2021
 #│   ├── 01
 #│   │   ├── 01
 #│   │   ├── 02
@@ -16,7 +16,7 @@ zero=0
 #....
 #Creamos la estructura de directorio para las temperaturas máximas
 #/home/smx1/inm
-#├── temperaturas-max2020
+#├── temperaturas-max2021
 #│   ├── 01
 #│   │   ├── 01
 #│   │   ├── 02
@@ -39,7 +39,7 @@ for  mes in $( seq 1 1 12 ); do
 	    else
 		    day=$dia
 	    fi
-	    mkdir -p /home/$USER/inm/radar2020/$month/$day
-	    mkdir -p /home/$USER/inm/temperaturas-max2020/$month/$day
+	    mkdir -p /home/$USER/inm/radar2021/$month/$day
+	    mkdir -p /home/$USER/inm/temperaturas-max2021/$month/$day
     done
 done
